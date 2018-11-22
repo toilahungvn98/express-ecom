@@ -1,0 +1,157 @@
+{
+	"product" : [
+		{
+			"id"       : 1,
+			"title"    : "dung-cu-keo-cat-toc-Sharp-Shear",
+			"name"     : "Sharp Shear",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/1.jpg",
+			"price"    : 35.00,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "Feather",
+			"category" : "Razors",
+			"color"    : ["Red","Black","Brown"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		},
+		{
+			"id"       : 2,
+			"title"    : "dung-cu-cat-toc-flat-combo",
+			"name"     : "Flat Comb",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/2.jpg",
+			"price"    : 5.00,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "Brother",
+			"category" : "Sharp Shear",
+			"color"    : ["Red","Silver"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		},
+		{
+			"id"       : 3,
+			"title"    : "dung-cu-cat-toc-tong-do-fade-clipper",
+			"name"     : "Fade Clipper",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/3.jpg",
+			"price"    : 105.00,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "ZZZX",
+			"category" : "Razors",
+			"color"    : ["Red","Black","Brown"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		},
+		{
+			"id"       : 4,
+			"title"    : "dung-cu-cat-toc-Gel-Cream",
+			"name"     : "Gel Cream",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/4.jpg",
+			"price"    : 7.5,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "XVZ",
+			"category" : "Razors",
+			"color"    : ["Red","Black","Brown"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		},
+		{
+			"id"       : 5,
+			"title"    : "dung-cu-cat-toc-bear-razor",
+			"name"     : "Beard Razor",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/5.jpg",
+			"price"    : 89.00,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "Faza",
+			"category" : "Razors",
+			"color"    : ["Red","Black","Brown"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		},
+       {
+			"id"       : 6,
+			"title"    : "dung-cu-cat-toc-shaving-brush",
+			"name"     : "Shaving Brush",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/6.jpg",
+			"price"    : 19.00,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "Sweet",
+			"category" : "Razors",
+			"color"    : ["Red","Black","Brown"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		},
+         {
+			"id"       : 7,
+			"title"    : "dung-cu-cat-toc-shave-cream",
+			"name"     : "Shave Cream",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/7.jpg",
+			"price"    : 24.00,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "Bros",
+			"category" : "Razors",
+			"color"    : ["Red","Black","Brown"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		},
+       {
+			"id"       : 8,
+			"title"    : "dung-cu-cat-toc-hair-dryer",
+			"name"     : "Hair Dryer",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/8.jpg",
+			"price"    : 35.00,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "ABCZ",
+			"category" : "Razors",
+			"color"    : ["Red","Black","Brown"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		},
+		{
+			"id"       : 9,
+			"title"    : "dung-cu-cat-toc-pre-shave",
+			"name"     : "Pre Shave",
+			"imgUrl"   : "http://demo.zytheme.com/hairy/assets/images/shop/grid/9.jpg",
+			"price"    : 30.00,
+			"status"   : ["Available", "Maintenance", "Loaned", "Reserved"],
+			"brand"    : "Zara",
+			"category" : "Razors",
+			"color"    : ["Red","Black","Brown"],
+			"handleLength" : "120mm",
+			"bladeLength"  : "50mm",
+			"fullLength"   : "150mm",
+			"description"  : "Duis ipsum dolor sit amet, consecter adipis elite, sedo eiusmod tempor incididunt ut labor et dolor magna aliquaeni minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+
+
+		}
+       ]
+}

@@ -2,12 +2,16 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cartRouter = require('./routes/cart');
+var detailRouter = require('./routes/productdetail');
 var app = express();
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,9 +23,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//config session
+
+app.use(session({
+  secret: 'hung123',
+  resave: false,
+  saveUninitialized: true,
+  // name : 'SID',
+  unset : 'destroy'
+}));
+
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cart', cartRouter);
+app.use('/product-detail',detailRouter);
 
 
 // catch 404 and forward to error handler
@@ -39,5 +56,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+
+
+app.locals.dataJson = require('./models/database.json');
+
+
+
 
 module.exports = app;
