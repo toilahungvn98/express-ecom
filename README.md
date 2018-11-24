@@ -1,4 +1,6 @@
 # express-ecom
 thuc hanh 
+
+- User Authencation /Authorization :
  
- -day 2,3,4,5 : tim hieu passport JS, de lam user authencation( chung thuc nguoi dung);
+ + Register &#9937;
