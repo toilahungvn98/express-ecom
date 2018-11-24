@@ -1,15 +1,23 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var cartRouter = require('./routes/cart');
-var detailRouter = require('./routes/productdetail');
-var app = express();
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const cartRouter = require('./routes/cart');
+const detailRouter = require('./routes/productdetail');
+const app = express();
+
+
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://hung:hung12@ds211694.mlab.com:11694/ecom',{ useNewUrlParser: true })
+.then( () => console.log('MongoDB Connected ...'))
+.catch( err => console.log(err));
+
 
 
 
@@ -28,8 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'hung123',
   resave: false,
-  saveUninitialized: true,
-  // name : 'SID',
+  saveUninitialized: false,
+  httpOnly : true,
+  name : 'ssID',
   unset : 'destroy'
 }));
 
