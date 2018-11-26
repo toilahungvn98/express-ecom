@@ -3,5 +3,5 @@ thuc hanh
 
 - User Authencation /Authorization :
  
- + Login/Register  &#9971;
+ + Login/Register with JWT and Cookie  &#9971;
  + Shopping Cart &#9937;
