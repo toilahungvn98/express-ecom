@@ -33,14 +33,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //config session
 
-app.use(session({
-  secret: 'hung123',
-  resave: false,
-  saveUninitialized: false,
-  httpOnly : true,
-  name : 'ssID',
-  unset : 'destroy'
-}));
+// app.use(session({
+//   secret: 'hung123',
+//   resave: false,
+//   saveUninitialized: false,
+//   httpOnly : true,
+//   name : 'ssID',
+//   unset : 'destroy'
+// }));
 
 
 

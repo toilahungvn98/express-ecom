@@ -41,30 +41,20 @@
             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                 <div class="contact-form">
                     <p>Do not have an account? <a href="/users/register">Register</a></p>
-                     <form class="mb-0">
+
+                    <% if (typeof error !== 'undefined') { %>
+                        <% error.forEach(function(err){ %>
+                          <p style="color: red;"><%= err.msg %></p>
+                    <% })} %>
+                     <form  action="/users/login" method="post" class="mb-0">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
-                                <input type="email" class="form-control" name="contact-email" id="email" placeholder="Email address *" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email address *" value="<%= (typeof user !== 'undefined') ? user.email : '' %>">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
-                                <input type="password" class="form-control" name="Password" id="Password" placeholder="Password *" required>
+                                <input type="password" class="form-control" name="password" id="Password" placeholder="Password *" value="<%= (typeof user !== 'undefined') ? user.password : '' %>" >
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="pull-left">
-                                    <div class="input-checkbox">
-                                        <label class="label-checkbox">
-                                          <input type="checkbox" name="rememberMe">
-                                          <div class="check-indicator"></div>
-                                        </label>
-                                        <span>Remember me</span>
-                                    </div>
-                                </div>
-                                <div class="pull-right">
-                                    <div class="forget--pass">
-                                        <a href="#">Forget password?</a>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <input type="submit" value="Login" name="submit" class="btn btn--secondary btn--rounded mt-30">
 

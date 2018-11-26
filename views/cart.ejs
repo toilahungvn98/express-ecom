@@ -59,53 +59,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <%= JSON.stringify(productcart) %>
-
-                                <% if (productcart) { %>
-                                <% productcart.forEach(function(idss){ %>
-
-                                <% dataJson.product.forEach(function(v){ %>
-                                <%  if (v.id == idss) { %>
-                                <tr class="cart-product">
-                                    <td></td>
-                                    <td class="cart-product-item">
-
-                                        <div class="cart-product-img">
-                                            <a href="/product-detail/<%= v.title %>.<%= v.id %>">
-                                                <img src="<%= v.imgUrl %>" width="80" alt="product"/>
-                                            </a>
-                                        </div>
-                                        <div class="cart-product-name">
-                                            <h6><a href="#"><%= v.name %></a></h6>
-                                        </div>
-                                    </td>
-                                    <td class="cart-product-price">$ <%= v.price %></td>
-                                    <td class="cart-product-quantity">
-                                        <div class="product-quantity">
-                                            <span class="qant-plus"><i class="fa fa-caret-up"></i></span>
-                                            <input type="text" value="1" id="pro1-qunt" readonly>
-                                            <span class="qant-minus"><i class="fa fa-caret-down"></i></span>
-                                        </div>
-                                        
-                                    </td>
-                                    <td class="cart-product-total">$ <%= v.price %></td>
-                                    <td>
-                                        <div class="cart-product-remove">
-                                            <i class="lnr lnr-cross"></i>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                </tr>
-
-
-                                <% } %>
-                                <% }) %>
-                                <% }) %>
-
-                                <% } else { %>
-                                <h3 style="color: red;">Cart Empty!</h3>
-                                <% } %>
-
+                               <h3>SKILL</h3>
                             </tbody>
                         </table>
                     </div>
