@@ -1,13 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'home' });
+router.get('/',function(req, res, next) {
+	  res.render('index', { title: 'home' });
 });
 //shop
 router.get('/shop.html', function(req, res, next) {
   res.render('shop', { title: 'shop' });
+  console.log(req.session.id);
+ 
 });
 
 //gallery

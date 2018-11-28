@@ -35,64 +35,110 @@
     <!-- #page-title end -->
 
 <!-- Shop Cart
-    ============================================= -->
-    <section id="shopcart" class="shop shop-cart bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="shop-cart-heading">
-                        You have (3 items)
-                    </div>
+============================================= -->
+<section id="shopcart" class="shop shop-cart bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="shop-cart-heading">
+                    You have (<%= (typeof cart !== 'undefined') ? cart.length : 0  %> items)
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="cart-table table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr class="cart-product">
-                                    <th></th>
-                                    <th class="cart-product-item">Name</th>
-                                    <th class="cart-product-price">Price</th>
-                                    <th class="cart-product-quantity">Quantity</th>
-                                    <th class="cart-product-total">Total</th>
-                                    <th class="cart-product-remove"></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               <h3>SKILL</h3>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- .cart-table end -->
-                </div>
-                <!-- .col-md-12 end -->
             </div>
-            <!-- .row end -->
-            <div class="row clearfix">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="cart-product-action">
-                        <form class="form-inline pull-left">
-                            <input type="text" class="form-control mb-0" id="coupon" placeholder="Coupon Code" />
-                            <button type="submit" class="btn btn--secondary">Apply</button>
-                        </form>
-                        <div class="cart-total-amount text-right">
-                            Subtotal :<span class="">$100.5</span>
-                        </div>
-                        <!-- .cart-total-amount end -->
-                    </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="cart-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr class="cart-product">
+                                <th></th>
+                                <th class="cart-product-item">Name</th>
+                                <th class="cart-product-price">Price</th>
+                                <th class="cart-product-quantity">Quantity</th>
+                                <th class="cart-product-total">Total</th>
+                                <th class="cart-product-remove"></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <% if (typeof cart !== 'undefined') {   %>
+
+                             <% var stotal = 0; %>  
+
+                            <% cart.forEach(function(val){  %>
+
+                                <% var sub = parseFloat(val.qty * val.price).toFixed(2) %>
+                                <% stotal += +sub %>
+                                                     
+                            <tr class="cart-product">
+                                <td></td>
+                                <td class="cart-product-item">
+
+                                    <div class="cart-product-img">
+                                        <a href="/product-detail/<%= val.title %>.<%= val.id %>">
+                                            <img height="80" src="<%= val.image %>"/>
+                                        </a>
+                                    </div>
+                                    <div class="cart-product-name">
+                                        <h6>
+                                            <a href="/product-detail/<%= val.title %>.<%= val.id %>">
+                                                <%= val.name %></a>
+                                        </h6>
+                                    </div>
+                                </td>
+                                <td class="cart-product-price">$ <%= val.price %></td>
+                                <td class="cart-product-quantity">
+                                    <div class="product-quantity">
+                                        <a href="/cart/update/<%= val.id %>?action=up"><span class="qant-plus"><i class="fa fa-caret-up"></i></span></a>
+                                        <input type="text" value="<%= val.qty %>" id="pro1-qunt" readonly>
+                                        <a href="/cart/update/<%= val.id %>?action=down"><span class="qant-minus"><i class="fa fa-caret-down"></i></span></a>
+                                    </div>
+                                </td>
+                                <td class="cart-product-total">$ <%= sub %></td>
+                                <td>
+                                    <div class="cart-product-remove">
+                                         <a href="/cart/update/<%= val.id %>?action=delete" onclick="return confirm('Are you sure to delete item?');"><i class="lnr lnr-cross"></i></a>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                             <% }) %>
+                            <% } else { %>
+                                <h3>Cart Empty</h3>
+                            <% }%>
+                            
+                        </tbody>
+                    </table>
                 </div>
-                <!-- .col-md-6 end -->
+                <!-- .cart-table end -->
             </div>
-            <!-- .row end -->
-            <div class="row">
-                <div class="col-xs-12 col-md-12">
-                    <a class="btn btn--secondary btn--rounded pull-right" href="#">Checkout</a>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="cart-product-action">
+                    <form class="form-inline pull-left">
+                        <input type="text" class="form-control mb-0" id="coupon" placeholder="Coupon Code" />
+                        <button type="submit" class="btn btn--secondary">Apply</button>
+                    </form>
+                    <div class="cart-total-amount text-right">
+                        Subtotal :<span class="">$ <%= stotal ? parseFloat(stotal).toFixed(2) : 0 %></span>
+                    </div>
+                    <!-- .cart-total-amount end -->
                 </div>
+            </div>
+            <!-- .col-md-6 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <a class="btn btn--secondary btn--rounded pull-right" href="/cart/checkout.html">Checkout</a>
             </div>
         </div>
-        <!-- .container end -->
-    </section>
-    <!-- #shopcart end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #shopcart end -->
 
 <!-- Footer #5
     ============================================= -->

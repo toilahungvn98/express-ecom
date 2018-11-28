@@ -32,17 +32,25 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //config session
+const uuidv1 = require('uuid/v1');
+app.use(session({
+  genid: function(req) {
+    return uuidv1(); // use UUIDs for session IDs
+  },
+  secret: 'hung123',
+  resave: true,
+  saveUninitialized: true,
+  httpOnly : true,
+  name : 'ssID',
+  unset : 'destroy',
+  cookie : { maxAge :  86400 * 1000 } //24hour
+}));
 
-// app.use(session({
-//   secret: 'hung123',
-//   resave: false,
-//   saveUninitialized: false,
-//   httpOnly : true,
-//   name : 'ssID',
-//   unset : 'destroy'
-// }));
-
-
+app.get('*', function(req, res, next){
+  res.locals.cart = req.session.cart;
+  console.log(req.session.cart);
+  next();
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
