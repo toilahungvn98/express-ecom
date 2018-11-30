@@ -10,6 +10,6 @@ thuc hanh
  
  - User Authencation /Authorization :
  
- + Login/Register with JWT and Cookie  &#9971;
+     + Login/Register with JWT and Cookie  &#9971;
  
  - Shopping Cart (with session) &#9937;
