@@ -1,0 +1,95 @@
+
+<%- include('include/header'); -%>
+
+<div class="container mt-5">
+ <div class="row">
+  <div class="col-12">
+    <div class="text-center mb-4">
+      <h3>Product</h3>
+      <form action="/admin/viewproduct" method="get" accept-charset="utf-8">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" >
+          <div class="input-group-append">
+            <button class="btn btn-outline-info" type="submit">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="col-12">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Category</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Size</th>
+          <th scope="col">Color</th>
+          <th scope="col">Description</th>
+          <th scope="col">Status</th>
+          <th scope="col">Action</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <td>
+          <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&h=350" height="70" alt="">
+        </td>
+        <td>Fade Clipers</td>
+        <td>$ 199</td>
+        <td>Clipers</td>
+        <td>Dragon</td>
+        <td> 500mm </td>
+        <td>
+          Silver,
+          Brown
+        </td>
+        <td>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            Read
+          </button>
+        </td>
+        <td>
+          Available
+        </td>
+        <td>
+          <a href="admin/updatepro/12" class="btn btn-block btn-warning">update</a>
+          <a href="admin/deletepro/12" class="btn btn-block btn-danger">delete</a>
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+</div>
+</div>
+
+<%- include('include/footer') -%>

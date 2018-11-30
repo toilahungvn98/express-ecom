@@ -1,0 +1,49 @@
+
+<%- include('include/header'); -%>
+
+<div class="container mt-5">
+ <div class="row">
+  <div class="col-12">
+    <div class="text-center mb-4">
+      <h3>Update Category</h3>
+    </div>
+  </div>
+  <div class="col-4">
+    <a href="/admin/viewcategory" class="btn btn-sm btn-info">Back View</a>
+  </div>
+  <div class="col-4">
+    <!-- check validation -->
+    <% if (typeof error !== 'undefined') { %>
+    <% error.forEach( function( err ) { %>
+    <p style="color: red;"><%= err.msg %></p>
+    <% }) %>
+    <% } %>
+    
+    <% if (typeof updated !== 'undefined') { %>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong><%= updated %>!</strong> 
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <% } %>
+
+    <!-- check validation -->
+
+
+    <form class="form-inline" method="POST" action="/admin/updatecat/<%= (typeof category !== 'undefined' ) ? category._id : '' %> ">
+
+      <label class="sr-only" for="cateogry">Update Category</label>
+      <input type="text" name="updatecat" class="form-control mb-2 mr-sm-2" id="category" placeholder="update category..." value="<%= (typeof category !== 'undefined' )? category.name : ''; %>">
+
+
+      <button type="submit" class="btn btn-primary mb-2">Update</button>
+    </form>
+
+  </div>
+  <div class="col-4"></div>
+</div>
+</div>
+
+<%- include('include/footer') -%>

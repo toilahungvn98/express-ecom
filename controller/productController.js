@@ -1,6 +1,7 @@
 
 
 
+
 exports.product_detail =  function(req, res, next) {
 	var idSP = req.params.productId;
 	if (!req.session.addToCart) {
