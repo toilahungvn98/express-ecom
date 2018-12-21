@@ -11,15 +11,17 @@ thuc hanh
 ** Express :
  
  
- - User Authencation /Authorization :
+ - User Authencation /Authorization : (data save database) 
  
      + Login/Register with JWT and Cookie  &#9971;
- 
+     
+     + Check validation with 1 so module (read package.json) 
+ - client using database fake ( files models : database.json) 
  - Shopping Cart (with session) &#9937;
 
 
- - Admin : 
+ - Admin : (save database) 
      + CRUD Category &#9971;
      + CRUD Product &#9937;
 
-****************** DESTROY PROJECT ***************  :(
+****************** DESTROY PROJECT ***************  :( 
